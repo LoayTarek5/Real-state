@@ -1,0 +1,120 @@
+@use '../layout' as *
+@use '../abstracts' as *
+
+
+
+.main-title
+  text-align: center
+  text-transform: uppercase
+  font-weight: 400
+  padding: 60px 0
+
+.row-shopping-cart
+  display: flex
+  flex-wrap: wrap
+  gap: 25px
+  @media( max-width:768px)
+    flex-direction: column
+  .shopping-cart-info
+    flex: 1.8
+    .box
+      display: flex
+      gap: 25px
+      margin-bottom: 25px
+      @media( max-width:576px)
+        flex-direction: column
+        text-align: center
+        align-items: center
+      .image
+        width: 140px
+        img
+          max-width: 100%
+      .text-info
+        display: flex
+        align-items: center
+        width: 80%
+        justify-content: space-between
+        @media( max-width:576px)
+          flex-direction: column
+          width: 100%
+          text-align: center
+          align-items: center
+        .col-1
+          flex: 1
+          .title
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+              color: $color-2
+          .price
+            color: $color-2
+            font-weight: 600
+        .quantity-box
+          flex: 1
+          text-align: center
+          .input-quantity
+            outline: none
+            width: 75px
+            border: 2px solid lightgray
+            border-radius: 6px
+            padding: 10px
+            margin-top: 10px
+            text-align: center
+        .total-price
+          flex: 1
+          display: flex
+          flex-direction: column
+          gap: 14px
+          align-items: flex-end
+          @media( max-width:576px)
+            align-items: center
+            margin-top: 10px
+          span
+            color: $color-2
+            font-weight: 600
+          .trash
+            color: #c92c2c
+            transition: 0.3s
+            cursor: pointer
+            &:hover
+              color: red
+  .shopping-cart-receipt
+    position: relative
+    flex: 0.5
+    padding: 25px
+    border: 2px solid
+    border-radius: 10px
+    height: fit-content
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 95%
+      height: 95%
+      border: 2px solid $base-font-color
+      border-radius: 10px
+      z-index: -1
+    .total-items
+      color: $base-font-color
+    .total-weight
+      color: $base-font-color
+    .total-price-receipt
+      color: $base-font-color
+      span
+        color: $color-2
+        font-weight: 600
+    button
+      width: 100%
+      padding: 15px 0
+      border-radius: 5px
+      border: none
+      background-color: $color-2
+      color: $color-3
+      text-transform: uppercase
+      margin-bottom: 7px
+      cursor: pointer
+      transition: 0.3s
+      &:hover
+        background-color: $color-1

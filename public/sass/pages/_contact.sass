@@ -1,0 +1,88 @@
+@use '../layout' as *
+@use '../abstracts' as *
+
+.container
+  .row-contact
+    display: flex
+    padding: 60px 0
+    @media (max-width: 768px)
+      flex-direction: column
+    @media (max-width: 576px)
+      flex-direction: column
+
+aside
+  @media (max-width: 768px)
+    padding: 0 0 0 75px
+  @media (max-width: 576px)
+    padding: 10px
+  .box
+    h4
+      font-weight: 500
+      font-size: 16px
+      text-transform: uppercase
+    p
+      color: $base-font-color
+      line-height: 1.6
+    a
+      transition: 0.3s
+      color: $base-font-color
+      &:hover
+        color: $color-2
+
+.contact-info
+  .rte
+    margin-bottom: 55px
+  .contact-container
+    padding: 0 0 70px 0
+    h3
+      font-size: 24px
+      text-transform: capitalize
+      font-weight: 400
+    p
+      color: $base-font-color
+      line-height: 1.4
+    form
+      margin-top: 25px
+      .form-box
+        margin-bottom: 25px
+        label
+          margin-bottom: 10px
+          display: block
+        input
+          width: 100%
+          transition: 0.4s        
+          padding: 10px 20px
+          border: 1px solid
+          border-color: transparent
+          &::placeholder
+            transition: 0.4s
+          &:focus
+            outline: none
+            border-color: $base-font-color
+            &::placeholder
+              opacity: 0
+        textarea
+          padding: 10px 20px
+          width: 100%
+          transition: 0.4s
+          border: 1px solid
+          border-color: transparent
+          height: 90px
+          &::placeholder
+            transition: 0.4s
+          &:focus
+            outline: none
+            border-color: $base-font-color
+            &::placeholder
+              opacity: 0
+      .btn
+        border: none
+        outline: none
+        background-color: $color-2
+        color: white
+        padding: 10px 30px
+        font-weight: 500
+        transition: 0.3s
+        cursor: pointer
+        &:hover
+          background-color: $color-1

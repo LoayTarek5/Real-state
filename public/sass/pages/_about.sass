@@ -1,0 +1,132 @@
+@use '../layout' as *
+@use '../abstracts' as *
+
+
+.main-section
+  padding: 50px 0
+  .container
+    position: relative
+    .image
+      overflow: hidden
+      img
+        max-width: 100%
+        transition: 0.3s
+        &:hover
+          transform: scale(1.1)
+    p
+      position: absolute
+      color: #ffffff
+      font-size: 56px
+      z-index: 2
+      top: 50%
+      left: 10%
+      transform: translateY(-50%)
+      @media (max-width: 768px)
+        top: 30%
+      @media (max-width: 576px)
+        font-size: 30px
+
+.gallery
+  padding: 60px 0
+  .container
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 10px
+    @media (max-width: 576px)
+      flex-direction: column
+    .box
+      position: relative
+      overflow: hidden
+      height: 400px
+      @media (max-width: 576px)
+        height: auto
+      img
+        max-width: 100%
+        max-height: 100%
+        transition: 0.3s
+        &:hover
+          transform: scale(1.1)
+      
+.info-section
+  padding: 60px 0
+  .container
+    display: flex
+    align-items: center
+    gap: 25px
+    @media (max-width: 655px)
+      flex-direction: column
+      align-items: flex-start
+    .text
+      flex: 1
+      h3
+        color: $color-2
+        text-transform: uppercase
+        font-weight: 400
+        font-size: 56px
+        margin-bottom: 20px
+        @media (max-width: 992px)
+          font-size: 36px
+        @media (max-width: 768px)
+          font-size: 25px
+        @media (max-width: 576px)
+          br
+            display: none
+      p
+        color: $base-font-color
+        font-size: 15px
+        @media (max-width: 768px)
+          font-size: 13px
+      li
+        list-style: disc
+        margin-bottom: 10px
+        @media (max-width: 768px)
+          font-size: 12px
+    .image
+      flex: 1
+      img
+        max-width: 100%
+
+.testemonials
+  padding: 60px
+  .main-title
+    text-align: center
+    font-size: 24px
+    font-weight: 400
+    text-transform: uppercase
+  & > p
+    text-align: center
+  .container
+    overflow: hidden
+    .cards-container
+      display: flex
+      gap: 20px
+      transform: translateX(calc(-0px))
+      transition: transform 0.6s
+      .inner-container
+        flex: 0 0 100%
+        .card
+          background-color: $color-1
+          color: $color-3
+          max-width: 580px
+          text-align: left
+          margin: auto
+          padding: 50px 40px
+          .testemonials-info
+            font-weight: 500
+    .bullets
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 10px
+      li
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        background-color: $base-font-color
+        transition: 0.3s
+        cursor: pointer
+        &.active
+          background-color: $color-2
+          width: 15px
+          height: 15px

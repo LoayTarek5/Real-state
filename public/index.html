@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="sass/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;700;800&family=Roboto:wght@100;300;400&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Real Estate</title>
+  </head>
+  <body>
+    <!-- Header Page -->
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="logo">
+            <img src="/imgs/LendLane_180x60_crop_center@2x.png" alt="" />
+          </div>
+          <div class="icons">
+            <i class="fa-solid fa-magnifying-glass search"> </i>
+            <i class="fa-regular fa-heart white-list"></i>
+            <a href="register"><i class="fa-regular fa-user user"></i></a>
+            <i class="fa-solid fa-cart-shopping shopping-cart"></i>
+            <div class="bar-magnet">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="search-container">
+              <form class="search-place">
+                <input
+                  class="search-input"
+                  type="search"
+                  placeholder="search"
+                />
+                <i class="fa-solid fa-magnifying-glass search-icon-input"></i>
+                <i class="fa-solid fa-x close-search-input"></i>
+              </form>
+              <div class="search-result-container">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <li><a href="index.html">Home</a></li>
+          <li id="catalog">
+            <a href="products.html">Catalog</a>
+            <ul class="meaga-menu-catalog">
+              <div class="col-1">
+                <li><a href="singleFamilyHome.html">Single Family Home</a></li>
+                <li><a href="Farms&Ranches.html">Farms & Ranches</a></li>
+                <li><a href="Condos&Townhomes.html">Condos & Townhomes</a></li>
+              </div>
+              <div class="col-2">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Catalog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </div>
+              <div class="col-3">
+                <li><a href="Registration.html">My account</a></li>
+                <li><a href="address.html">My addresses</a></li>
+                <li><a href="shoppingCart.html">My cart</a></li>
+              </div>
+              <div class="col-4">
+                <div>
+                  <img src="imgs/blog_2_280x380_crop_center.png" alt="" />
+                </div>
+                <div>
+                  <img src="imgs/blog_1_280x380_crop_center.png" alt="" />
+                </div>
+              </div>
+            </ul>
+            <ul class="bar-menu-catalog">
+              <li>
+                Main Menu
+                <ul class="bar-menu-catalog-1">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="products.html">Catalog</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                </ul>
+                <i class="fa-solid fa-chevron-down arrow arrow-main-menu"></i>
+              </li>
+              <li>
+                My account
+                <ul class="bar-menu-catalog-2">
+                  <li><a href="Registration.html">My account</a></li>
+                  <li><a href="address.html">My addresses</a></li>
+                  <li><a href="shoppingCart.html">My Cart</a></li>
+                </ul>
+                <i class="fa-solid fa-chevron-down arrow arrow-account"></i>
+              </li>
+            </ul>
+            <i class="fa-solid fa-chevron-down arrow arrow-catalog"></i>
+          </li>
+          <li id="collections">
+            <a href="collections.html">Collections</a>
+            <ul class="meaga-menu-collections">
+              <li><a href="singleFamilyHome.html">Single Family Home</a></li>
+              <li><a href="Farms&Ranches.html">Farms & Ranches</a></li>
+              <li><a href="Condos&Townhomes.html">Condos & Townhomes</a></li>
+            </ul>
+            <ul class="bar-menu-collection">
+              <li><a href="singleFamilyHome.html">Single Family Home</a></li>
+              <li><a href="Farms&Ranches.html">Farms & Ranches</a></li>
+              <li><a href="Condos&Townhomes.html">Condos & Townhomes</a></li>
+            </ul>
+            <i class="fa-solid fa-chevron-down arrow arrow-collections"></i>
+          </li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="wishlist.html" id="wishlist">WishList</a></li>
+          <li><a href="Registration.html" id="account">Account</a></li>
+        </nav>
+        <div class="close-magnet">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Landign of Home Page -->
+    <div class="landing">
+      <div class="container">
+        <div class="image">
+          <img src="/imgs/banner_1_560x770_crop_center.webp" alt="" />
+          <div class="img_label">
+            <p><strong>-15%</strong><br />For all</p>
+          </div>
+        </div>
+        <div class="text-content">
+          <h1>Discover a property you'll love to live</h1>
+          <p>
+            We are a full-service, luxury real estate brokerage and lifestyle
+            company representing clients worldwide in a broad spectrum of
+            classes.
+          </p>
+          <a href="products.html">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <div class="services">
+      <div class="container">
+        <div class="text">
+          <h2>offering quality real estate services</h2>
+          <div class="services-info">
+            <div class="box">
+              <img src="imgs/icon_1_50x50_crop_top.png" alt="" />
+              <p>Professional Agents</p>
+            </div>
+            <div class="box">
+              <img src="imgs/icon_2_50x50_crop_top.png" alt="" />
+              <p>property from anywhere</p>
+            </div>
+            <div class="box">
+              <img src="imgs/icon_3_50x50_crop_top.png" alt="" />
+              <p>well-furnished interiors</p>
+            </div>
+            <div class="box">
+              <img src="imgs/icon_4_50x50_crop_top.png" alt="" />
+              <p>affordable property pricing</p>
+            </div>
+          </div>
+          <a href="about.html">Read More about us</a>
+        </div>
+        <div class="image">
+          <img src="imgs/banner_2_740x850_crop_top.webp" alt="" />
+          <div class="sub-img">
+            <img
+              src="imgs/banner_3_9066e0bf-d6ef-48ef-a821-a9536c5ae990_360x500_crop_top.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>WELCOME, <%= name %></h1>
+    <form action="/logout?_method=DELETE" method="POST">
+      <button type="submit">Log Out</button>
+    </form>
+    <!-- FEATURED PRODUCTS -->
+    <div class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="container">
+        <div class="products-content">
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/wonderful_and_very_affordable_condo_loft_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <div class="info">
+              <p class="title-item">2 Bedroom Town Home</p>
+              <div class="price">
+                <span class="discount">$160,000.00</span>
+                <span class="actual-price">$150,000.00</span>
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-basket-shopping add-cart"></i
+                ><i class="fa-regular fa-eye view"></i
+                ><i class="fa-regular fa-heart add-whishlist"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/sunny_condos_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <div class="info">
+              <p class="title-item">3 Bedroom Single Family Home For Sale</p>
+              <div class="price">
+                <span class="actual-price">$210,000.00</span>
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-basket-shopping add-cart"></i
+                ><i class="fa-regular fa-eye view"></i
+                ><i class="fa-regular fa-heart add-whishlist"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/single_family_home_for_sale_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <div class="info">
+              <p class="title-item">4 Bedroom Single Family Home</p>
+              <div class="price">
+                <span class="actual-price">$456,000.00</span>
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-basket-shopping add-cart"></i
+                ><i class="fa-regular fa-eye view"></i
+                ><i class="fa-regular fa-heart add-whishlist"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/single_family_colonial_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <div class="info">
+              <p class="title-item">5-bedrooms luxury residential</p>
+              <div class="price">
+                <span class="discount">$400,000.00</span>
+                <span class="actual-price">$380,000.00</span>
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-basket-shopping add-cart"></i
+                ><i class="fa-regular fa-eye view"></i
+                ><i class="fa-regular fa-heart add-whishlist"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/queens_drive_horse_farm_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <p class="title-item">Amazing 6th Floor Condo</p>
+            <div class="price">
+              <span class="actual-price">$150,001.00</span>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-basket-shopping add-cart"></i
+              ><i class="fa-regular fa-eye view"></i
+              ><i class="fa-regular fa-heart add-whishlist"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/plaza_pacifica_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <div class="info">
+              <p class="title-item">Beautiful custom built home</p>
+              <div class="price">
+                <span class="actual-price">$210,001.00</span>
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-basket-shopping add-cart"></i
+                ><i class="fa-regular fa-eye view"></i
+                ><i class="fa-regular fa-heart add-whishlist"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/north_main_home_for_sale_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <div class="info">
+              <p class="title-item">Blue Sky House Condo</p>
+              <div class="price">
+                <span class="actual-price">$456,001.00</span>
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-basket-shopping add-cart"></i
+                ><i class="fa-regular fa-eye view"></i
+                ><i class="fa-regular fa-heart add-whishlist"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img
+                src="imgs/product/luxury_downtown_condo_3_280x300_crop_center.png"
+                alt=""
+              />
+              <a href="">Add to Cart</a>
+            </div>
+            <div class="info">
+              <p class="title-item">Cambridge pointe custom home</p>
+              <div class="price">
+                <span class="actual-price">$380,001.00</span>
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-basket-shopping add-cart"></i
+                ><i class="fa-regular fa-eye view"></i
+                ><i class="fa-regular fa-heart add-whishlist"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ABOUT -->
+    <div class="about">
+      <div class="container">
+        <div class="image">
+          <img src="imgs/banner_4_740x700_crop_top.png" alt="" />
+          <div class="img_label">
+            <p>Save<br /><strong>20%</strong></p>
+          </div>
+          <div class="sub-img">
+            <img src="imgs/banner_5_380x473_crop_top.png" alt="" />
+          </div>
+        </div>
+        <div class="text">
+          <h2>Find Your Home</h2>
+          <p>we providing best properties since 2011</p>
+          <p>
+            Every property we sell has numerous amenities that only add to your
+            comfort and create a great atmosphere.
+          </p>
+          <a href="products.html">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION -->
+    <div class="section">
+      <div class="cover">
+        <div class="container">
+          <div class="text">
+            <h2>
+              find your dream home! if you are looking for a place to buy or
+              rent, we know what to offer
+            </h2>
+            <a href="products.html">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BLOG POSTS -->
+    <div class="blog-posts">
+      <h2>Blog Post</h2>
+      <i class="fa-solid fa-angle-right right-cursor cursor"></i>
+      <div class="container">
+        <div class="posts-container">
+          <div class="post current-post">
+            <img src="imgs/banner_9_580x420_crop_top.jpg" alt="" />
+            <time class="post-time">June 30, 2014</time>
+            <a href="#" class="post-header"
+              >repellendus consequuntur aut ullam</a
+            >
+            <p class="post-decs">
+              Provident vitae corrupti culpa ullam quis facere veritatis
+              adipisci aliquid vero esse in illo aliquam...
+            </p>
+            <a href="#">read more</a>
+          </div>
+          <div class="post">
+            <img src="imgs/banner_8_580x420_crop_top.jpg" alt="" />
+            <time class="post-time">June 30, 2014</time>
+            <a href="#" class="post-header">harum, at sequi impedit</a>
+            <p class="post-decs">
+              Harum, at sequi impedit suscipit delectus excepturi sint Quaerat,
+              facilis, deleniti, minima similique iusto veritatis...
+            </p>
+            <a href="#">read more</a>
+          </div>
+          <div class="post">
+            <img src="imgs/banner_9_580x420_crop_top.jpg" alt="" />
+            <time class="post-time">June 30, 2014</time>
+            <a href="#" class="post-header"
+              >tempora quae dolor cumque nemo libero suscipit quas quia nihil</a
+            >
+            <p class="post-decs">
+              Tempore, perspiciatis, modi, sed, qui fugiat vel ducimus
+              dignissimos itaque accusantium voluptate consequuntur molestiae
+              placeat...
+            </p>
+            <a href="#">read more</a>
+          </div>
+        </div>
+      </div>
+      <i class="fa-solid fa-angle-left left-cursor cursor"></i>
+    </div>
+    <!-- OUR NEWSLETTER -->
+    <div class="newsletter">
+      <div class="container">
+        <h2>our newsletter.</h2>
+        <p>sign up and get updates on promotions, new books, and more!</p>
+        <form onsubmit="return false;">
+          <div class="input-email">
+            <input type="email" name="email" placeholder="Email adress" />
+            <span>Field can't be blank</span>
+          </div>
+          <input type="submit" name="submit" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="col-1">
+          <img
+            src="imgs/logo-footer_3c16a2bf-1287-4ee4-973c-a84792639c25_180x50_crop_center.png"
+            alt=""
+          />
+          <p>
+            LendLane our favorites fashionable discoveries, a selection of cool
+            items to integrate in your wardrobe. Compose a unique style with
+            personality which matches your own.
+          </p>
+          <div class="pay-icons">
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/amazon-92e856f82cae5a564cd0f70457f11af4d58fa037cf6e5ab7adf76f6fd3b9cafe.svg"
+              height="18"
+              alt="amazon_payments"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/apple_pay-f6db0077dc7c325b436ecbdcf254239100b35b70b1663bc7523d7c424901fa09.svg"
+              height="18"
+              alt="apple_pay"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/bitcoin-e41278677541fc32b8d2e7fa41e61aaab2935151a6048a1d8d341162f5b93a0a.svg"
+              height="18"
+              alt="bitcoin"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/litecoin-06f10bf73578fe346f5b2817673102b77c19ea71ebe05b2839495975651657c0.svg"
+              height="18"
+              alt="litecoin"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg"
+              height="18"
+              alt="maestro"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg"
+              height="18"
+              alt="paypal"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg"
+              height="18"
+              alt="visa"
+            />
+          </div>
+        </div>
+        <div class="col-2">
+          <h6>information</h6>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Catalog</a></li>
+          <li><a href="contact.html">Cantact us</a></li>
+        </div>
+        <div class="col-3">
+          <h6>my account</h6>
+          <li><a href="Registration.html">My account</a></li>
+          <li><a href="address.html">My addresses</a></li>
+          <li><a href="shoppingCart.html">My cart</a></li>
+        </div>
+        <div class="col-4">
+          <h6>customer service</h6>
+          <p>
+            Monday to Friday <br />
+            10am - 6.30pm <br />
+            (NewYork time)
+          </p>
+          <div class="call-phone">
+            <i class="fa-solid fa-phone"></i>
+            <a class="contact_phone tel_ltr" href="tel:+(001) 23 45 67 89"
+              >+(001) 23 45 67 89</a
+            >
+          </div>
+          <li>
+            <a class="contact_email" href="mailto:pop@zemez.io">pop@zemez.io</a>
+          </li>
+        </div>
+      </div>
+      <div class="footer-end">
+        2023. Shopping Cart by Loay
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"><a href="#"></a></i>
+          <i class="fa-brands fa-youtube"><a href="#"></a></i>
+          <i class="fa-brands fa-linkedin"><a href="#"></a></i>
+          <i class="fa-brands fa-twitter"><a href="#"></a></i>
+          <i class="fa-brands fa-github"><a href="#"></a></i>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/items.js"></script>
+  </body>
+</html>

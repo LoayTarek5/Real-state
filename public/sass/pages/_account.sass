@@ -1,0 +1,139 @@
+@use '../layout' as *
+@use '../abstracts' as *
+
+.account
+  .main-header
+    text-align: center
+    text-transform: uppercase
+    font-size: 35px
+    font-weight: 500
+  .main-options
+    margin: 50px 0
+    &.close
+      display: none
+    .content-options
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+      gap: 25px
+      max-width: 600px
+      margin-left: auto
+      margin-right: auto
+      .box
+        position: relative
+        border-radius: 5px
+        width: 250px
+        height: 210px
+        transition: 0.3s
+        align-items: center
+        display: flex
+        justify-content: center
+        flex-direction: column
+        cursor: pointer
+        &::after
+          content: ""
+          position: absolute
+          border: 2px solid black
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          border-radius: 10px
+          transition: 0.3s
+          opacity: 0
+          z-index: -1
+        &:hover::after
+          opacity: 1
+        i
+          font-size: 35px
+          color: $color-2
+        p
+          text-transform: uppercase
+          font-size: 20px
+  .registration
+    &.close
+      display: none
+    .reg-content
+      margin-left: auto
+      margin-right: auto
+      max-width: 580px
+      h4
+        display: flex
+        justify-content: space-between
+        align-items: center
+        text-transform: uppercase
+        font-weight: 500
+        i
+          cursor: pointer
+      .reg-box
+        margin-bottom: 20px
+        label
+          display: block
+          margin-bottom: 10px
+          font-size: 13px
+          font-weight: 600
+        input
+          width: 100%
+          outline: none
+          border: 1px solid
+          border-color: gainsboro
+          padding: 10px
+          transition: 0.3s
+          &:focus
+            border-color: black
+      .reg-btn
+        border: none
+        background-color: #c6afa4
+        color: white
+        padding: 12px 20px
+        font-weight: 600
+        text-transform: uppercase
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+          background-color: $color-1
+  .log-in-main
+    &.close
+      display: none
+    .log-content
+      margin-left: auto
+      margin-right: auto
+      max-width: 580px
+      h4
+        display: flex
+        justify-content: space-between
+        align-items: center
+        text-transform: uppercase
+        font-weight: 500
+        i
+          cursor: pointer
+      .log-box
+        margin-bottom: 20px
+        label
+          display: block
+          margin-bottom: 10px
+          font-size: 13px
+          font-weight: 600
+        input
+          width: 100%
+          outline: none
+          border: 1px solid
+          border-color: gainsboro
+          padding: 10px
+          transition: 0.3s
+          &:focus
+            border-color: black
+      .log-btn
+        border: none
+        background-color: #c6afa4
+        color: white
+        padding: 12px 20px
+        font-weight: 600
+        text-transform: uppercase
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+          background-color: $color-1
+
+

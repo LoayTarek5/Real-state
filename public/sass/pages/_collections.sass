@@ -1,0 +1,44 @@
+@use '../layout' as *
+@use '../abstracts' as *
+
+
+  
+.collection-content
+  padding: 100px 0
+  .heading-page
+    text-align: center
+    font-size: 32px
+    font-weight: 400
+    text-transform: uppercase
+  .container
+    display: flex
+    gap: 50px
+    justify-content: center
+    flex-wrap: wrap
+    @media (min-width: 656px) and  (max-width: 992px)
+      justify-content: flex-start
+    .box
+      text-align: center
+      a
+        display: block
+        text-transform: uppercase
+        margin-top: 10px
+        transition: 0.3s
+        position: relative
+        color: $color-2
+        width: fit-content
+        margin: auto
+        &::after
+          content: ""
+          position: absolute
+          height: 2px
+          width: 100%
+          background-color: #c6afa4
+          bottom: -4px
+          left: 50%
+          transform: translateX(-50%)
+          transition: 0.3s
+        &:hover
+          color: $color-1
+          &::after
+            width: 0%

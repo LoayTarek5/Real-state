@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="sass/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;700;800&family=Roboto:wght@100;300;400&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Condos&Townhomes</title>
+  </head>
+  <body>
+    <!-- Header Page -->
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="logo">
+            <img src="/imgs/LendLane_180x60_crop_center@2x.png" alt="" />
+          </div>
+          <div class="icons">
+            <i class="fa-solid fa-magnifying-glass search"></i>
+            <i class="fa-regular fa-heart white-list"></i>
+            <i class="fa-regular fa-user user"></i>
+            <i class="fa-solid fa-cart-shopping shopping-cart"></i>
+            <div class="bar-magnet">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="search-container">
+              <form class="search-place">
+                <input
+                  class="search-input"
+                  type="search"
+                  placeholder="search"
+                />
+                <i class="fa-solid fa-magnifying-glass search-icon-input"></i>
+                <i class="fa-solid fa-x close-search-input"></i>
+              </form>
+              <div class="search-result-container">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <li><a href="index.html">Home</a></li>
+          <li id="catalog">
+            <a href="products.html">Catalog</a>
+            <!-- <i class="fa-solid fa-chevron-down arrow"></i> -->
+            <ul class="meaga-menu-catalog">
+              <div class="col-1">
+                <li><a href="">Single Family Home</a></li>
+                <li><a href="">Farms & Ranches</a></li>
+                <li><a href="">Condos & Townhomes</a></li>
+              </div>
+              <div class="col-2">
+                <li><a href="">Home</a></li>
+                <li><a href="">Catalog</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+              </div>
+              <div class="col-3">
+                <li><a href="">My account</a></li>
+                <li><a href="">My addresses</a></li>
+                <li><a href="">My cart</a></li>
+              </div>
+              <div class="col-4">
+                <div>
+                  <img src="imgs/blog_2_280x380_crop_center.png" alt="" />
+                </div>
+                <div>
+                  <img src="imgs/blog_1_280x380_crop_center.png" alt="" />
+                </div>
+              </div>
+            </ul>
+            <ul class="bar-menu-catalog">
+              <li>
+                Main Menu
+                <ul class="bar-menu-catalog-1">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">Catalog</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Contact us</a></li>
+                </ul>
+                <i class="fa-solid fa-chevron-down arrow arrow-main-menu"></i>
+              </li>
+              <li>
+                My account
+                <ul class="bar-menu-catalog-2">
+                  <li><a href="">My account</a></li>
+                  <li><a href="">My addresses</a></li>
+                  <li><a href="">My Cart</a></li>
+                </ul>
+                <i class="fa-solid fa-chevron-down arrow arrow-account"></i>
+              </li>
+            </ul>
+            <i class="fa-solid fa-chevron-down arrow arrow-catalog"></i>
+          </li>
+          <li id="collections">
+            <a href="collections.html">Collections</a>
+            <ul class="meaga-menu-collections">
+              <li><a href="">Single Family Home</a></li>
+              <li><a href="">Farms & Ranches</a></li>
+              <li><a href="">Condos & Townhomes</a></li>
+            </ul>
+            <ul class="bar-menu-collection">
+              <li><a href="">Single Family Home</a></li>
+              <li><a href="">Farms & Ranches</a></li>
+              <li><a href="">Condos & Townhomes</a></li>
+            </ul>
+            <i class="fa-solid fa-chevron-down arrow arrow-collections"></i>
+          </li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="wishlist.html" id="wishlist">WishList</a></li>
+          <li><a href="account.html" id="account">Account</a></li>
+        </nav>
+        <div class="close-magnet">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Current Page Links  -->
+    <div class="curr-page-links">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="collections.html">Collections</a>
+        <span>|</span>
+        <span>Condos & Townhomes</span>
+      </div>
+    </div>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <!-- CATEGORY  -->
+        <div class="category-content">
+          <div class="categ-box">
+            <h3>Collections</h3>
+            <li><a href="#">Single Family Home</a></li>
+            <li><a href="#">Farms & Ranches</a></li>
+            <li><a href="#">Condos & Townhomes</a></li>
+          </div>
+          <div class="categ-box">
+            <h3>Product Vendors</h3>
+            <li><a href="index.html">Real Estate</a></li>
+          </div>
+          <div class="categ-box">
+            <h3>Product Types</h3>
+            <li><a href="#">Commercial</a></li>
+            <li><a href="#">Luxury</a></li>
+            <li><a href="#">Residential</a></li>
+          </div>
+        </div>
+        <!-- PRODUCTS CONETNT -->
+        <div class="products-container">
+          <h1>Products</h1>
+          <div class="control-content">
+            <div class="sort">
+              <label for="sort_by_select">Sort By: </label>
+              <select id="sort_by_select">
+                <option value="manual">Featured</option>
+                <option value="best-selling">Best Selling</option>
+                <option value="title-ascending">Name: A - Z</option>
+                <option value="title-descending">Name: Z - A</option>
+                <option value="price-ascending">Price: low to high</option>
+                <option value="price-descending">Price: high to low</option>
+                <option value="created-ascending">Oldest to newest</option>
+                <option value="created-descending">Newest to oldest</option>
+              </select>
+            </div>
+            <div class="num-products">
+              <span class="num">18</span>
+              items
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-grip-vertical dis-grid active"></i>
+              <i class="fa-solid fa-list dis-list"></i>
+            </div>
+          </div>
+          <div class="products-content">
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/elegant_single_family_home_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Elegant Single Family Home</p>
+                <div class="price">
+                  <span class="actual-price">$210,002.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/charming_victorian_home_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Family waterfront home</p>
+                <div class="price">
+                  <span class="discount">$486,000.00 </span>
+                  <span class="actual-price">$456,002.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/cambridge_pointe_custom_home_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Luxury Downtown Condo</p>
+                <div class="price">
+                  <span class="actual-price"> $380,002.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/blue_sky_house_condo_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">North Main Home for Sale</p>
+                <div class="price">
+                  <span class="actual-price">$150,003.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/beautiful_custom_built_home_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Plaza Pacifica</p>
+                <div class="price">
+                  <span class="actual-price">$210,003.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/amazing_6th_floor_condo_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Queens Drive Horse Farm</p>
+                <div class="price">
+                  <span class="actual-price">$456,003.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/4_bedroom_single_family_home_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Single Family</p>
+                <div class="price">
+                  <span class="actual-price">$150,004.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/5-bedrooms_luxury_residential_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Single Family Home for Sale</p>
+                <div class="price">
+                  <span class="actual-price">$380,003.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="imgs/product/2_bedroom_town_home_3_313x313_crop_center.png"
+                  alt=""
+                />
+                <a href="">Add to Cart</a>
+              </div>
+              <div class="info">
+                <p class="title-item">Sunny Condos</p>
+                <div class="price">
+                  <span class="actual-price">$210,004.00</span>
+                </div>
+                <p class="descreption">
+                  If you are looking for a place to buy or rent, we know what to
+                  offer you. Taking into consideration all your demands and
+                  wishes we will find an ideal solution: neighbors, area, number
+                  of rooms, flo...
+                </p>
+                <div class="icons">
+                  <i class="fa-solid fa-basket-shopping add-cart"></i
+                  ><i class="fa-regular fa-eye view"></i
+                  ><i class="fa-regular fa-heart add-whishlist"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <p>10 - 18 product(s) of 18</p>
+            <ul>
+              <li class="pagination_prev">
+                <a href="Condos&Townhomes.html" title="Next"
+                  ><i class="fa fa-angle-left" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="pagination_el">
+                <a href="Condos&Townhomes.html">1</a>
+              </li>
+              <li class="pagination_current pagination_el">
+                <span>2</span>
+              </li>
+              <li class="pagination_next"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="col-1">
+          <img
+            src="imgs/logo-footer_3c16a2bf-1287-4ee4-973c-a84792639c25_180x50_crop_center.png"
+            alt=""
+          />
+          <p>
+            LendLane our favorites fashionable discoveries, a selection of cool
+            items to integrate in your wardrobe. Compose a unique style with
+            personality which matches your own.
+          </p>
+          <div class="pay-icons">
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/amazon-92e856f82cae5a564cd0f70457f11af4d58fa037cf6e5ab7adf76f6fd3b9cafe.svg"
+              height="18"
+              alt="amazon_payments"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/apple_pay-f6db0077dc7c325b436ecbdcf254239100b35b70b1663bc7523d7c424901fa09.svg"
+              height="18"
+              alt="apple_pay"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/bitcoin-e41278677541fc32b8d2e7fa41e61aaab2935151a6048a1d8d341162f5b93a0a.svg"
+              height="18"
+              alt="bitcoin"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/litecoin-06f10bf73578fe346f5b2817673102b77c19ea71ebe05b2839495975651657c0.svg"
+              height="18"
+              alt="litecoin"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg"
+              height="18"
+              alt="maestro"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg"
+              height="18"
+              alt="paypal"
+            />
+
+            <img
+              src="//tm-shopify066-real-estate.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg"
+              height="18"
+              alt="visa"
+            />
+          </div>
+        </div>
+        <div class="col-2">
+          <h6>information</h6>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Catalog</a></li>
+          <li><a href="#">Cantact us</a></li>
+        </div>
+        <div class="col-3">
+          <h6>my account</h6>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">My addresses</a></li>
+          <li><a href="#">My cart</a></li>
+        </div>
+        <div class="col-4">
+          <h6>customer service</h6>
+          <p>
+            Monday to Friday <br />
+            10am - 6.30pm <br />
+            (NewYork time)
+          </p>
+          <div class="call-phone">
+            <i class="fa-solid fa-phone"></i>
+            <a class="contact_phone tel_ltr" href="tel:+(001) 23 45 67 89"
+              >+(001) 23 45 67 89</a
+            >
+          </div>
+          <li>
+            <a class="contact_email" href="mailto:pop@zemez.io">pop@zemez.io</a>
+          </li>
+        </div>
+      </div>
+      <div class="footer-end">
+        2023. Shopping Cart by Loay
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"><a href="#"></a></i>
+          <i class="fa-brands fa-youtube"><a href="#"></a></i>
+          <i class="fa-brands fa-linkedin"><a href="#"></a></i>
+          <i class="fa-brands fa-twitter"><a href="#"></a></i>
+          <i class="fa-brands fa-github"><a href="#"></a></i>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="js/products.js"></script>
+    <script type="module" src="js/items.js"></script>
+  </body>
+</html>

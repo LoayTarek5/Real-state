@@ -1,0 +1,238 @@
+[
+  {
+    "id": 1,
+    "title": "2 Bedroom Town Home",
+    "price": "$150,000.00",
+    "discount": "$160,000.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/wonderful_and_very_affordable_condo_loft_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/wonderful_and_very_affordable_condo_loft_3_280x300_crop_center.png",
+      "imgs/product/over-view/wonderful_and_very_affordable_condo_loft_2_377x380_crop_center.png",
+      "imgs/product/over-view/wonderful_and_very_affordable_condo_loft_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 2,
+    "title": "3 Bedroom Single Family Home For Sale",
+    "price": "$210,000.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/sunny_condos_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/sunny_condos_3_280x300_crop_center.png",
+      "imgs/product/over-view/sunny_condos_2_377x380_crop_center.png",
+      "imgs/product/over-view/sunny_condos_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 3,
+    "title": "4 Bedroom Single Family Home",
+    "price": "$456,000.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/single_family_home_for_sale_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/single_family_home_for_sale_3_280x300_crop_center.png",
+      "imgs/product/over-view/single_family_home_for_sale_2_377x380_crop_center.png",
+      "imgs/product/over-view/single_family_home_for_sale_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 4,
+    "title": "5-bedrooms luxury residential",
+    "price": "$380,000.00",
+    "discount": "$400,000.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/single_family_colonial_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/single_family_colonial_3_280x300_crop_center.png",
+      "imgs/product/over-view/single_family_colonial_2_377x380_crop_center.png",
+      "imgs/product/over-view/single_family_colonial_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 5,
+    "title": "Amazing 6th Floor Condo",
+    "price": "$150,001.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/queens_drive_horse_farm_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/queens_drive_horse_farm_3_280x300_crop_center.png",
+      "imgs/product/over-view/queens_drive_horse_farm_2_377x380_crop_center.png",
+      "imgs/product/over-view/queens_drive_horse_farm_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 6,
+    "title": "Beautiful custom built home",
+    "price": "$210,001.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/plaza_pacifica_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/plaza_pacifica_3_280x300_crop_center.png",
+      "imgs/product/over-view/plaza_pacifica_2_377x380_crop_center.png",
+      "imgs/product/over-view/plaza_pacifica_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 7,
+    "title": "Blue Sky House Condo",
+    "price": "$456,001.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/north_main_home_for_sale_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/north_main_home_for_sale_3_280x300_crop_center.png",
+      "imgs/product/over-view/north_main_home_for_sale_2_377x380_crop_center.png",
+      "imgs/product/over-view/north_main_home_for_sale_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 8,
+    "title": "Cambridge pointe custom home",
+    "price": "$380,001.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/luxury_downtown_condo_3_280x300_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/luxury_downtown_condo_3_280x300_crop_center.png",
+      "imgs/product/over-view/luxury_downtown_condo_2_377x380_crop_center.png",
+      "imgs/product/over-view/luxury_downtown_condo_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 9,
+    "title": "Charming Victorian home",
+    "price": "$150,002.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/family_waterfront_home_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/family_waterfront_home_3_313x313_crop_center.png",
+      "imgs/product/over-view/family_waterfront_home_2_377x380_crop_center.png",
+      "imgs/product/over-view/family_waterfront_home_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 10,
+    "title": "Elegant Single Family Home",
+    "price": "$210,002.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/elegant_single_family_home_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/elegant_single_family_home_3_313x313_crop_center.png",
+      "imgs/product/over-view/elegant_single_family_home_2_377x380_crop_center.png",
+      "imgs/product/over-view/elegant_single_family_home_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 11,
+    "title": "Family waterfront home",
+    "price": "$456,002.00",
+    "discount": "$486,000.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/charming_victorian_home_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/charming_victorian_home_3_313x313_crop_center.png",
+      "imgs/product/over-view/charming_victorian_home_2_377x380_crop_center.png",
+      "imgs/product/over-view/charming_victorian_home_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 12,
+    "title": "Luxury Downtown Condo",
+    "price": "$380,002.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/cambridge_pointe_custom_home_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/cambridge_pointe_custom_home_3_313x313_crop_center.png",
+      "imgs/product/over-view/cambridge_pointe_custom_home_2_377x380_crop_center.png",
+      "imgs/product/over-view/cambridge_pointe_custom_home_1_377x380_crop_center.png"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "North Main Home for Sale",
+    "price": "$150,003.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/blue_sky_house_condo_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/blue_sky_house_condo_3_313x313_crop_center.png",
+      "imgs/product/over-view/blue_sky_house_condo_2_377x380_crop_center.png",
+      "imgs/product/over-view/blue_sky_house_condo_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 14,
+    "title": "Plaza Pacifica",
+    "price": "$210,003.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/beautiful_custom_built_home_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/beautiful_custom_built_home_3_313x313_crop_center.png",
+      "imgs/product/over-view/beautiful_custom_built_home_2_377x380_crop_center.png",
+      "imgs/product/over-view/beautiful_custom_built_home_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 15,
+    "title": "Queens Drive Horse Farm",
+    "price": "$456,003.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/amazing_6th_floor_condo_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/amazing_6th_floor_condo_3_313x313_crop_center.png",
+      "imgs/product/over-view/amazing_6th_floor_condo_2_377x380_crop_center.png",
+      "imgs/product/over-view/amazing_6th_floor_condo_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 16,
+    "title": "Single Family",
+    "price": "$150,004.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/4_bedroom_single_family_home_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/4_bedroom_single_family_home_3_313x313_crop_center.png",
+      "imgs/product/over-view/4_bedroom_single_family_home_2_377x380_crop_center.png",
+      "imgs/product/over-view/4_bedroom_single_family_home_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 17,
+    "title": "Single Family Home for Sale",
+    "price": "$380,003.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/5-bedrooms_luxury_residential_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/5-bedrooms_luxury_residential_3_313x313_crop_center.png",
+      "imgs/product/over-view/5-bedrooms_luxury_residential_2_377x380_crop_center.png",
+      "imgs/product/over-view/5-bedrooms_luxury_residential_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  },
+  {
+    "id": 18,
+    "title": "Sunny Condos",
+    "price": "$210,004.00",
+    "descreption": "If you are looking for a place to buy or rent, we know what to offer you. Taking into consideration all your demands and wishes we will find an ideal solution: neighbors, area, number of rooms, flo...",
+    "image_url": "imgs/product/2_bedroom_town_home_3_313x313_crop_center.png",
+    "sub_imgs": [
+      "imgs/product/2_bedroom_town_home_3_313x313_crop_center.png",
+      "imgs/product/over-view/2_bedroom_town_home_2_377x380_crop_center.png",
+      "imgs/product/over-view/2_bedroom_town_home_1_377x380_crop_center.png"
+    ],
+    "visit": false
+  }
+]

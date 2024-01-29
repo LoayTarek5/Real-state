@@ -1,0 +1,1066 @@
+@use 'layout' as *
+@use 'abstracts' as *
+@use 'pages' as *
+@use 'components' as *
+
+body
+  font-family: 'Karla', sans-serif
+  font-family: 'Roboto', sans-serif
+  font-family: 'Work Sans', sans-serif
+  position: relative
+
+// Reset //
+ul
+  list-style: none
+li
+  list-style: none
+a
+  text-decoration: none
+
+
+// Header OF Home Page //
+header
+  position: sticky
+  top: 0
+  width: 100%
+  background-color: $main-color
+  z-index: 100
+  .main-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 15px
+    .logo
+      flex: 1
+      text-align: center
+    .icons i
+      margin-left: 25px
+      font-size: 20px
+      color: white
+      transition: 0.3s
+      cursor: pointer
+      &:hover
+        color: $links-color-hover
+    .shopping-cart
+      position: relative
+      span
+        position: absolute
+        background-color: #111111
+        color: #ffffff
+        font-size: 10px
+        top: -16px
+        right: -21px
+        border-radius: 50%
+        width: 25px
+        height: 25px
+        display: flex
+        justify-content: center
+        align-items: center
+    .bar-magnet
+      i
+        color: black
+    .search-container
+      position: absolute
+      width: 100%
+      background-color: #ffffff
+      top: -71px
+      left: 0
+      padding: 15px 0
+      text-align: center
+      transition: 0.3s
+      &.open
+        top: 0
+      i
+        margin: 0
+        padding: 0
+      .search-place
+        display: flex
+        justify-content: center
+        align-items: center
+        .search-input
+          padding: 10px 12px
+          color: $base-font-color
+          transition: 0.3s
+          outline: none
+          border: 1px solid $base-font-color
+          border-right: 0
+          width: 500px
+          @media ( max-width: 768px )
+            width: 350px
+          @media ( max-width: 576px )
+            width: 250px
+          &::placeholder
+            transition: 0.3s
+            color: $base-font-color
+          &:focus::placeholder
+            opacity: 0
+        .search-icon-input
+          background-color: $color-4
+          padding: 10px 15px
+          margin-right: 20px
+          transition: 0.3s
+          &:hover
+            background-color: $main-color
+            color: $color-3
+        .close-search-input
+          color: $base-font-color
+          font-size: 13px
+          transition: 0.3s
+          &:hover
+            color: $color-4
+      .search-result-container
+        max-width: 500px
+        position: absolute
+        background-color: white
+        left: 50%
+        transform: translateX(-50%)
+        top: 70px
+        z-index: 10
+        overflow-y: auto
+        max-height: 360px
+        .search-result-content
+          padding: 20px
+          .box-search-result
+            display: flex
+            gap: 25px
+            .image-search-result
+              width: 100px
+              img
+                max-width: 100%
+            .search-result-info
+              text-align: left
+              padding: 15px
+              .title
+                color: black
+                font-weight: 500
+                margin-bottom: 10px
+                display: block
+                transition: 0.3s
+                &:hover
+                  color: $color-2
+              .price-content
+                display: flex
+                align-items: center
+                gap: 10px
+                font-size: 13px
+                color: $base-font-color
+                .discount
+                  text-decoration: line-through
+                  font-size: 10px
+  .close-magnet
+    opacity: 0
+    position: fixed
+  nav
+    list-style: none
+    display: flex
+    justify-content: space-evenly
+    padding: 20px 30px
+    transition: 0.3s
+    .arrow
+      color: white
+      font-size: 10px
+      cursor: pointer
+      position: relative
+      top: -2px
+      right: -8px
+    .bar-menu-catalog,.bar-menu-collection
+      display: none
+      height: 0
+    a
+      color: white
+      text-decoration: none
+      position: relative
+      text-transform: uppercase
+      &::after
+        content: ""
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        height: 2px
+        width: 0%
+        background-color: white
+        bottom: -6px
+        transition: 0.3s
+      &:hover::after
+        width: 100%
+    #wishlist, #account
+      display: none
+
+  .bar-magnet
+    display: none
+  @media (max-width: 768px)
+    .main-header
+      padding: 15px
+    .main-header .logo
+      flex: 0
+
+  @media (max-width: 768px)
+    .icons
+      display: flex
+      .user,.white-list
+        display: none
+      .bar-magnet
+        display: block
+  @media (max-width: 768px)
+    nav
+      background-color: white
+      position: absolute
+      display: flex
+      flex-direction: column
+      left: -535px
+      top: calc(100%)
+      width: calc(70% - 50px)
+      padding: 25px
+      margin: 0
+      height: 100vh
+      justify-content: flex-start
+      gap: 40px
+      overflow-y: scroll
+      li
+        width: 100%
+        position: relative
+        font-weight: 500
+      a::after
+        content: none
+      .bar-menu-catalog,.bar-menu-collection,.bar-menu-catalog-1,.bar-menu-catalog-2
+        display: block
+        transition: 0.3s
+        height: 0
+        margin: 0
+        padding-left: 20px
+        overflow: hidden
+        a
+          display: block
+          text-transform: capitalize
+          font-weight: normal
+          margin: 10px 0
+          font-size: 14px
+      .bar-menu-catalog.active
+        height: auto
+        margin-top: 24px
+      .bar-menu-collection.active
+        height: 85px
+        margin-top: 24px
+      .bar-menu-catalog-1
+        margin-bottom: 20px
+      .bar-menu-catalog-1.active
+        height: 115px
+      .bar-menu-catalog-2.active
+        height: 85px
+      .arrow
+        transition: 0.3s
+        color: black
+        position: absolute
+        top: 0px
+        right: 0
+        font-size: 15px
+        &.active
+          transform: rotate(180deg)
+      a
+        color: black !important
+        font-weight: bold
+        transition: 0.3s
+        &:hover
+          color: $links-color-hover !important
+      #wishlist, #account
+        display: block !important
+    .close-magnet
+      width: 30%
+      background: rgba(0,0,0,.7)
+      position: fixed
+      top: 0
+      bottom: 0
+      right: 0
+      z-index: 150
+      transition: transform,.3s
+      transform: translate3d(100%,0,0)
+      i
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        font-size: 35px
+        color: white
+        cursor: pointer
+    nav.active
+      left: 0
+    .close-magnet.active
+      transform: translateZ(0)
+      opacity: 1
+
+// Mega Menu of Nav Bars(Catalog) //
+header nav .meaga-menu-catalog
+  position: absolute
+  justify-content: space-evenly
+  background-color: white
+  width: 100%
+  padding: 20px
+  left: 0
+  z-index: 101
+  display: none
+  li
+    position: relative
+    width: fit-content
+    &::after
+      position: absolute
+      content: ""
+      height: 2px
+      width: 0%
+      left: 0
+      bottom: -5px
+      background-color: #c6afa4
+      transition: 0.3s
+    &:hover::after
+      width: 100%
+    a
+      display: block
+      color: black
+      text-transform: capitalize
+      margin-bottom: 25px
+  .col-4
+    div
+      overflow: hidden
+      display: inline-block
+      img
+        transition: 0.3s
+      &:hover img
+        transform: scale(1.05)
+  @media (max-width: 992px)
+    li
+      font-size: 13px
+    .col-4 img
+      width: 200px
+
+// Mega Menu of Nav Bars(Collections) //
+header nav .meaga-menu-collections
+  position: absolute
+  background-color: white
+  padding: 15px
+  width: 115px
+  display: none
+  li
+    position: relative
+    width: fit-content
+    &::after
+      position: absolute
+      content: ""
+      height: 2px
+      width: 0%
+      left: 0
+      bottom: -5px
+      background-color: #c6afa4
+      transition: 0.3s
+    &:hover::after
+      width: 100%
+  a
+    color: black
+    text-transform: capitalize
+    margin-bottom: 12px
+    display: block
+    font-size: 13px
+
+@media (min-width: 769px)
+  header nav #catalog.open .meaga-menu-catalog
+    display: flex
+    
+  header nav #collections.open .meaga-menu-collections
+    display: block
+@media (max-width: 768px)
+  header nav .meaga-menu-catalog,header nav .meaga-menu-collections
+    display: none
+
+.overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgb(0,0,0, 0.6)
+  z-index: 100
+
+// Landing of Home Page //
+.landing
+  background-color: $main-color
+  padding-top: 15px
+  @media (min-width: 993px)
+    height: 100vh
+  .container
+    display: flex
+  .image
+    position: relative
+    img
+      max-width: 100%
+    .img_label
+      position: absolute
+      background-color: $color-2
+      border-radius: 50%
+      color: white
+      width: 200px
+      height: 200px
+      display: flex
+      justify-content: center
+      align-items: center
+      line-height: 1.2
+      font-size: 30px
+      text-transform: uppercase
+      text-align: center
+      left: -55px
+      top: 0
+  .text-content
+    padding: 20px
+    width: 500px
+    h1
+      margin: 0
+      color: white
+      text-transform: uppercase
+      font-weight: normal
+      font-size: 50px
+    p
+      color: white
+      line-height: 1.6
+      margin-bottom: 20px
+    a
+      display: block
+      width: fit-content
+      text-decoration: none
+      background-color: #c6afa4
+      text-transform: uppercase
+      padding: 15px 45px
+      transition: 0.3s
+      color: white
+      &:hover
+        background: $button-hover-color
+  @media (max-width: 992px)
+    .image
+      width: 400px
+      .img_label
+        width: 100px
+        height: 100px
+        left: 0
+        font-size: 15px
+    .text-content
+      h1
+        font-size: 35px
+      p
+        font-size: 15px
+  @media (min-width: 576px) and (max-width: 700px)
+    .text-content
+      h1
+        font-size: 20px
+      p
+        font-size: 15px
+    .image .img_label
+      width: 70px
+      height: 70px
+      font-size: 10px
+  @media (max-width: 575px)
+    .container
+      flex-direction: column
+      .image
+        margin: auto
+        width: 250px
+        .img_label
+          width: 70px
+          height: 70px
+          font-size: 10px
+      .text-content
+        text-align: center
+        width: 300px
+        margin: auto
+        h1
+          font-size: 17px
+        p
+          font-size: 13px
+        a
+          margin: auto
+          font-size: 12px
+          padding: 10px 15px
+
+// Services //
+.services
+  margin-top: 150px
+  padding: 70px 0
+  @media (max-width: 992px)
+    margin: 0
+  .container
+    display: flex
+    gap: 15px
+    @media (max-width: 768px)
+      flex-direction: column
+      padding: 0 25px
+    .text
+      flex-basis: 80%
+      h2
+        text-transform: uppercase
+        font-weight: normal
+        font-size: 54px
+        margin-bottom: 15px
+      @media (max-width: 992px)
+        margin-right: 40px
+        h2
+          font-size: 20px
+      .services-info
+        padding: 10px
+        .box
+          display: flex
+          align-items: center
+          gap: 10px
+          margin-bottom: 20px
+          p
+            text-transform: uppercase
+            font-weight: 400
+            font-size: 20px
+          @media (max-width: 992px)
+            p
+              font-size: 15px
+      a
+        text-transform: uppercase
+        font-weight: 600
+        color: $color-2
+        text-decoration: none
+        position: relative
+        transition: 0.3s
+        &::after
+          content: ""
+          position: absolute
+          height: 2px
+          width: 100%
+          background-color: #c6afa4
+          bottom: -4px
+          left: 50%
+          transform: translateX(-50%)
+          transition: 0.3s
+        &:hover
+          color: $color-1
+          &::after
+            width: 0%
+    .image
+      position: relative
+      img
+        max-width: 100%
+      .sub-img
+        img
+          position: absolute
+          width: 50%
+          bottom: -15px
+          left: -50px
+          @media (max-width: 768px)
+            bottom: -30px
+            left: -15px
+
+// FEATURED PRODUCTS //
+.featured-products
+  padding: 50px 0
+  h2
+    text-align: center
+    margin: 20px 0
+    text-transform: uppercase
+    font-weight: normal
+    font-size: 30px
+  .products-content
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    gap: 20px
+    .item
+      position: relative
+      text-align: center
+      .image
+        cursor: pointer
+        position: relative
+        width: fit-content
+        margin: auto
+        img
+          max-width: 100%
+        a
+          display: block
+          position: absolute
+          background-color: #c6afa4
+          color: #ffffff
+          width: 100%
+          bottom: 0
+          padding: 15px 0
+          text-transform: uppercase
+          font-weight: 600
+          transition: 0.3s
+          opacity: 0
+          @media (max-width: 992px)
+            display: none
+          &:hover
+            background-color: $color-1
+      &:hover a
+        opacity: 1
+      p
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+          color: $color-2
+      .price
+        margin-bottom: 15px
+        .discount
+          font-size: 13px
+          text-decoration: line-through
+          color: $product-price-sale-color
+        .actual-price
+          font-size: 20px
+          font-weight: 600
+          color: $color-2
+      .icons
+        position: absolute
+        display: flex
+        flex-direction: column
+        top: 15px
+        right: 20px
+        gap: 15px
+        transition: 0.3s
+        opacity: 0
+        i
+          background-color: $color-2
+          color: $color-3
+          cursor: pointer
+          border-radius: 50%
+          padding: 13px
+          transition: 0.3s
+          &:hover
+            background-color: $color-1
+        .add-cart
+          display: none
+          @media (max-width: 992px)
+            display: block
+        .view
+          @media (max-width: 768px)
+            display: none
+      &:hover .icons
+        opacity: 1
+      .icons
+        @media (max-width: 992px)
+          opacity: 1
+          flex-direction: row
+          justify-content: center
+          align-items: center
+          position: static
+
+//  ABOUT SECTION //
+.about
+  padding: 70px 0
+  .container
+    display: flex
+    align-items: center
+    gap: 45px
+    @media (max-width: 768px)
+      gap: 20px
+    @media (max-width: 576px) 
+      flex-direction: column
+    .image
+      position: relative
+      img
+        width: 100%
+      .img_label
+        position: absolute
+        background-color: $color-2
+        border-radius: 50%
+        color: white
+        width: 165px
+        height: 165px
+        display: flex
+        justify-content: center
+        align-items: center
+        line-height: 1.2
+        font-size: 30px
+        text-transform: uppercase
+        text-align: center
+        right: -27px
+        top: 13px
+        @media (max-width: 768px)
+          width: 120px
+          height: 120px
+          font-size: 20px
+        @media (max-width: 576px)
+          width: 100px
+          height: 100px
+          font-size: 20px
+          right: -10px
+          top: -10px
+      .sub-img
+        img
+          position: absolute
+          width: 300px
+          right: -22%
+          bottom: -12%
+    .text
+      flex-basis: 60%
+      margin-left: 160px
+      h2
+        text-transform: uppercase
+        font-size: 50px
+        font-weight: 400
+      p:first-of-type
+        text-transform: uppercase
+        font-weight: 500
+      p:last-of-type 
+        font-size: 17px
+        color: $base-font-color
+        line-height: 1.8
+    @media (max-width: 992px)
+      .text
+        flex-basis: 70%
+        margin-left: 40px
+        h2
+          font-size: 30px
+        @media (max-width: 768px)
+          h2
+            font-size: 25px
+          p:first-of-type
+            font-size: 15px
+          p:last-of-type 
+            font-size: 13px
+      .image .sub-img img
+        width: 200px
+        right: -6%
+        bottom: -8%
+    a
+      display: block
+      width: fit-content
+      text-decoration: none
+      background-color: #c6afa4
+      text-transform: uppercase
+      padding: 15px 45px
+      transition: 0.3s
+      color: white
+      @media (max-width: 768px)
+        padding: 10px 20px
+      &:hover
+        background: $button-hover-color
+
+// SECTION //
+.section
+  margin: 60px 0
+  padding: 36.459% 0 0
+  position: relative
+  .cover
+    background-image: url("/imgs/banner_6_2048x700_crop_center.png")
+    background-size: cover
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    z-index: 1
+    background-position: 50% 50%
+  .container
+    .text
+      text-align: center
+      padding: 100px
+      h2
+        color: $color-3
+        text-transform: uppercase
+        font-size: 45px
+        font-weight: 400
+      @media (max-width: 992px)
+        padding: 75px
+        h2
+          font-size: 25px
+      
+      a
+        display: block
+        width: fit-content
+        text-decoration: none
+        background-color: #c6afa4
+        text-transform: uppercase
+        padding: 15px 45px
+        transition: 0.3s
+        color: white
+        margin: auto
+        &:hover
+          background: $button-hover-color
+      @media (max-width: 576px)
+        padding: 40px
+        h2
+          font-size: 15px
+        a
+          padding: 10px 20px
+          font-size: 10px
+
+// BLOG POST //
+.blog-posts
+  padding: 70px 0
+  margin-top: 105px
+  position: relative
+  h2
+    text-align: center
+    font-weight: 400
+    line-height: 1.1
+    text-transform: uppercase
+    letter-spacing: 0
+  .container
+    overflow: hidden
+  .cursor
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 45px
+    height: 45px
+    border-radius: 50%
+    font-size: 25px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.3s
+    color: $button-color
+    cursor: pointer
+    z-index: 2
+    @media (max-width: 576px) 
+      top: 55%
+    &:hover
+      background-color: $button-color
+      color: $color-3
+  .right-cursor
+    right: 15px
+  .left-cursor
+    left: 15px
+  .right-cursor.hidden,.left-cursor.hidden
+    display: none
+  .posts-container
+    display: flex
+    width: 100%
+    gap: 20px
+    transform: translateX(0)
+    transition: transform 0.6s
+    .post
+      text-align: center
+      flex: 0 0 calc(100%)
+      img
+        max-width: 100%
+      .post-time
+        display: block
+        color: $color-2
+        font-weight: 500
+        margin: 15px 0
+      .post-header
+        font-size: 20px
+        display: block
+        transition: 0.3s
+        text-transform: uppercase
+        color: $color-1
+        &:hover
+          color: $color-2
+      .post-decs
+        color: $base-font-color
+      a:last-child
+        text-transform: uppercase
+        font-weight: 600
+        color: $color-2
+        text-decoration: none
+        position: relative
+        transition: 0.3s
+        &::after
+          content: ""
+          position: absolute
+          height: 2px
+          width: 100%
+          background-color: #c6afa4
+          bottom: -4px
+          left: 50%
+          top: 17px
+          transform: translateX(-50%)
+          transition: 0.3s
+        &:hover
+          color: $color-1
+          &::after
+            width: 0%
+
+//  OUR NEWSLETTER //
+.newsletter
+  padding: 70px 0
+  background-color: $main-color
+  color: $color-3
+  text-align: center
+  h2
+    font-size: 45px
+    text-transform: uppercase
+    font-weight: 500
+    margin-bottom: 0
+  p
+    text-transform: uppercase
+    font-size: 18px
+  form
+    display: flex
+    justify-content: center
+    gap: 20px
+    align-items: center
+    .input-email
+      position: relative
+      span
+        position: absolute
+        color: red
+        font-size: 12px
+        bottom: 0px
+        left: 0
+        display: none
+        transition: 0.3s
+        z-index: 1
+        &.appear
+          bottom: -17px
+          display: block
+    input[type="email"]
+      border: none
+      outline: none
+      padding: 15px 20px
+      width: 275px
+      position: relative
+      z-index: 2
+    input[type="submit"]
+      color: $color-3
+      background-color: #c6afa4 
+      border: none
+      outline: none
+      padding: 15px 35px
+      text-transform: uppercase
+      font-weight: 400
+      transition: 0.3s
+      &:hover
+        background: $button-hover-color
+  @media (max-width: 576px)
+    h2
+      font-size: 30px
+    p
+      font-size: 15px
+    form
+      flex-direction: column
+      align-items: flex-start
+      .input-email
+        width: 100%
+      input[type="submit"]
+        width: 100%
+      input[type="email"]
+        width: 96%
+        padding-right: 0
+
+// FOOTER //
+footer
+  padding-top: 60px
+  .footer-end
+    background-color: $main-color
+    height: 50px
+    padding: 0 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 30px
+    color: $color-3
+    @media (max-width: 576px)
+      flex-direction: column
+    .social-icons
+      display: flex
+      align-items: center
+      gap: 10px
+      i
+        color: $color-3
+        transition: 0.3s
+        cursor: pointer
+        &:hover
+          color: $color-2
+  .container
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    gap: 40px
+    h6
+      text-transform: uppercase
+      font-size: 20px
+      margin: 0
+      font-weight: 400
+    p
+      color: $base-font-color
+      line-height: 1.8
+    li
+      list-style: none
+      margin: 10px 0
+      
+    a
+      color: $base-font-color
+      transition: 0.3s
+      position: relative
+      &:hover
+        color: $color-2
+    .col-1
+      .pay-icons
+        display: flex
+        align-items: center
+        gap: 10px
+        margin-left: -12px
+    .col-2,.col-3
+      a::after
+        content: ""
+        position: absolute
+        height: 2px
+        width: 0%
+        background-color: $color-2
+        left: 0
+        bottom: -5px
+        transition: 0.3s
+      a:hover::after
+        width: 100%
+    .col-4
+      .call-phone
+        display: flex
+        align-items: center
+        gap: 5px
+        i
+          color: $color-2
+
+
+.container-menu-cart
+  display: none
+  flex-direction: column
+  padding: 30px
+  gap: 25px
+  width: 435px
+  max-height: 400px
+  overflow-y: auto
+  position: absolute
+  background-color: white
+  right: 0
+  z-index: 100
+  &.active
+    display: flex
+  .item-box
+    display: flex
+    gap: 25px
+    .img-menu-cart
+      width: 140px
+    .info-menu-cart
+      display: flex
+      flex-direction: column
+      width: 100%
+      justify-content: space-around
+      .title-menu-cart
+        font-size: 10px
+        transition: none
+        color: black
+        letter-spacing: 2px
+        transition: 0.3s
+        &:hover
+          color: $color-2
+      .quantity-menu-cart
+        display: flex
+        text-transform: lowercase
+        gap: 4px
+        margin: 0
+        color: black
+        font-size: 10px
+        span
+          position: static
+          border-radius: 0
+          display: block
+          width: fit-content
+          height: fit-content
+          color: black
+          background-color: white
+      .delet-menu-item
+        color: #c62121
+        margin: 0
+        transition: none
+        font-size: 15px
+        align-self: end
+        transition: 0.3s
+        &:hover
+          color: red
+      
