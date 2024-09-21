@@ -36,7 +36,7 @@ This project is a full-stack Real-state website built with vanilla JavaScript fo
 
 ## Technologies Used
 
-- Frontend: HTML, CSS, Vanilla JavaScript
+- Frontend: HTML, CSS, Vanilla JavaScript, SASS
 - Backend: Node.js, Express.js
 - Authentication: Passport.js with local strategy
 - View Engine: EJS
