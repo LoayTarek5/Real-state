@@ -1,4 +1,4 @@
-# E-commerce Website
+# Real-state Website
 
 This project is a full-stack Real-state website built with vanilla JavaScript for the frontend, Node.js with Express for the backend, and EJS as the templating engine. It features a responsive design, product catalog, shopping cart functionality, user authentication, and integrated payment processing.
 
