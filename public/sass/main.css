@@ -1463,6 +1463,19 @@ aside .box a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
+.account .main-options .content-options .log-out button {
+  background-color: #c6afa4;
+  color: #ffffff;
+  border: navajowhite;
+  outline: none;
+  transition: 0.3s;
+  padding: 10px 25px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.account .main-options .content-options .log-out button:hover {
+  background-color: #111111;
+}
 .account .registration.close {
   display: none;
 }
@@ -1531,6 +1544,11 @@ aside .box a:hover {
 }
 .account .log-in-main .log-content h4 i {
   cursor: pointer;
+}
+.account .log-in-main .log-content .msg-error {
+  background-color: #ffcfcf;
+  border-color: #ffa3a3;
+  color: #b65353;
 }
 .account .log-in-main .log-content .log-box {
   margin-bottom: 20px;

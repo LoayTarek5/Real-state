@@ -1,4 +1,5 @@
 import {headerScroll, HoverMegaMenus, arrowMenuCheck,searchInput} from "./header.js"
+
 searchInput
 let productContent = document.querySelector(
   ".products-container .products-content"

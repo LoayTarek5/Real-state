@@ -141,6 +141,135 @@ barMagnet.onclick = () => {
   };
 };
 
+// Load the JSON data
+fetch("dataProducts.json")
+  .then((response) => response.json())
+  .then((productsData) => {
+
+    searchInput.addEventListener("input", (e) => {
+      if (searchInput.value !== "") {
+        searchResultContainer.innerHTML = "";
+        productsData.forEach((item) => {
+          if (
+            item.title.toLowerCase().includes(searchInput.value.toLowerCase())
+          ) {
+            let boxSearch = document.createElement("div");
+            boxSearch.classList.add("box-search-result");
+
+            let imageContainer = document.createElement("div");
+            imageContainer.classList.add("image-search-result");
+            let imgLink = document.createElement("a");
+            imgLink.setAttribute("href", "itemPage.html");
+            let img = document.createElement("img");
+            img.src = item.image_url;
+
+            imgLink.appendChild(img);
+            imageContainer.appendChild(imgLink);
+
+            let searchResultInfo = document.createElement("div");
+            searchResultInfo.classList.add("search-result-info");
+
+            let title = document.createElement("a");
+            title.setAttribute("href", "itemPage.html");
+            title.classList.add("title");
+            title.innerText = item.title;
+            title.addEventListener("click", () => {
+              checkVisit(title.innerText);
+            });
+
+            let priceContainer = document.createElement("div");
+            priceContainer.classList.add("price-content");
+
+            let price = document.createElement("span");
+            price.classList.add("price");
+            price.innerText = item.price;
+
+            priceContainer.appendChild(price);
+
+            // Check if discount exists before creating the element
+            if (item.discount) {
+              let discount = document.createElement("span");
+              discount.classList.add("discount");
+              discount.innerText = item.discount;
+              priceContainer.appendChild(discount);
+
+              let save = document.createElement("span");
+              save.classList.add("save");
+              // Calculate The Saved Money
+              let numPrice = item.price.replace(/[^0-9.]/g, "");
+              let numDiscount = item.discount.replace(/[^0-9.]/g, "");
+              let totalDiscount = 100 - (+numPrice / +numDiscount) * 100;
+              save.innerText = `Save -${totalDiscount.toFixed(2)}%`;
+              priceContainer.appendChild(save);
+            }
+
+            searchResultInfo.appendChild(title);
+            searchResultInfo.appendChild(priceContainer);
+
+            boxSearch.appendChild(imageContainer);
+            boxSearch.appendChild(searchResultInfo);
+
+            searchResultContainer.appendChild(boxSearch);
+          }
+        });
+      }
+      document
+        .querySelector(
+          "header .main-header .search-container .search-result-container"
+        )
+        .appendChild(searchResultContainer);
+    });
+  })
+  .catch((error) => console.error("Error loading the JSON file:", error));
+
+
+searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    searchInputIcon.click();
+  }
+});
+
+searchInputIcon.addEventListener("click", (e) => {
+  if (searchInput.value !== "") {
+    arrFetchData.forEach((item) => {
+      if (item.title.toLowerCase().includes(searchInput.value.toLowerCase())) {
+        arrSearchItems.push(item);
+        localStorage.setItem("SearchItems", JSON.stringify(arrSearchItems));
+      }
+    });
+  }
+  window.location.href = "search.html";
+});
+
+searchIcon.addEventListener("click", () => {
+  searchInputContainer.classList.add("open");
+  document.querySelector(
+    "header .main-header .search-container .search-result-container"
+  ).style.display = "block";
+});
+
+searchInputClose.addEventListener("click", () => {
+  searchInputContainer.classList.remove("open");
+
+  document.querySelector(
+    "header .main-header .search-container .search-result-container"
+  ).style.display = "none";
+  searchInput.value = "";
+  searchResultContainer.remove();
+});
+
+export function getItemFromFetch() {
+  // Check if Theres Tasks In Local Storage
+  if (localStorage.getItem("FetchData")) {
+    arrFetchData = JSON.parse(localStorage.getItem("FetchData"));
+  }
+}
+
+export { headerScroll, HoverMegaMenus, arrowMenuCheck, shoppingCart, cartIcon };
+
+
+/*
 searchInput.addEventListener("input", (e) => {
   if (searchInput.value !== "") {
     searchResultContainer.innerHTML = "";
@@ -193,6 +322,7 @@ searchInput.addEventListener("input", (e) => {
           .filter((ch) => ch !== "$" && ch !== "." && ch !== ",")
           .join("");
         let totalDiscount = 100 - (+numPrice / +numDiscount) * 100;
+        
         save.innerText = `Save -${totalDiscount.toFixed(2)}%`;
 
         priceContainer.appendChild(price);
@@ -216,47 +346,4 @@ searchInput.addEventListener("input", (e) => {
     .appendChild(searchResultContainer);
 });
 
-searchInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    searchInputIcon.click();
-  }
-});
-
-searchInputIcon.addEventListener("click", (e) => {
-  if (searchInput.value !== "") {
-    arrFetchData.forEach((item) => {
-      if (item.title.toLowerCase().includes(searchInput.value.toLowerCase())) {
-        arrSearchItems.push(item);
-        localStorage.setItem("SearchItems", JSON.stringify(arrSearchItems));
-      }
-    });
-  }
-  window.location.href = "search.html";
-});
-
-searchIcon.addEventListener("click", () => {
-  searchInputContainer.classList.add("open");
-  document.querySelector(
-    "header .main-header .search-container .search-result-container"
-  ).style.display = "block";
-});
-
-searchInputClose.addEventListener("click", () => {
-  searchInputContainer.classList.remove("open");
-
-  document.querySelector(
-    "header .main-header .search-container .search-result-container"
-  ).style.display = "none";
-  searchInput.value = "";
-  searchResultContainer.remove();
-});
-
-export function getItemFromFetch() {
-  // Check if Theres Tasks In Local Storage
-  if (localStorage.getItem("FetchData")) {
-    arrFetchData = JSON.parse(localStorage.getItem("FetchData"));
-  }
-}
-
-export { headerScroll, HoverMegaMenus, arrowMenuCheck, shoppingCart, cartIcon };
+*/

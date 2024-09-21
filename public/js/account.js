@@ -23,27 +23,27 @@ const closeLogIn = document.querySelector(".account .log-in-main h4 .close");
 const regBtn = document.querySelector(".account .registration .reg-btn");
 const logInBtn = document.querySelector(".account .log-in-main .log-btn");
 
-boxOptions.forEach((box) => {
-  box.addEventListener("click", () => {
-    if (box.classList.contains("regist"))
-    {
-      mainOptions.classList.add("close");
-      registration.classList.remove("close");
-    }
-    else if (box.classList.contains("log-in"))
-    {
-      mainOptions.classList.add("close");
-      logIn.classList.remove("close");
-    }
-  });
-});
+// boxOptions.forEach((box) => {
+//   box.addEventListener("click", () => {
+//     if (box.classList.contains("regist"))
+//     {
+//       mainOptions.classList.add("close");
+//       registration.classList.remove("close");
+//     }
+//     else if (box.classList.contains("log-in"))
+//     {
+//       mainOptions.classList.add("close");
+//       logIn.classList.remove("close");
+//     }
+//   });
+// });
 
-closeReg.addEventListener("click", () => {
-  mainOptions.classList.remove("close");
-  registration.classList.add("close");
-});
+// closeReg.addEventListener("click", () => {
+//   mainOptions.classList.remove("close");
+//   registration.classList.add("close");
+// });
 
-closeLogIn.addEventListener("click", () => {
-  mainOptions.classList.remove("close");
-  logIn.classList.add("close");
-});
+// closeLogIn.addEventListener("click", () => {
+//   mainOptions.classList.remove("close");
+//   logIn.classList.add("close");
+// });

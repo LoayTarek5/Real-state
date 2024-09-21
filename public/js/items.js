@@ -30,6 +30,9 @@ export let cartItemsArr = [];
 
 let arrFetchData = [];
 
+//Array contains all Item's Data From JSON File
+let arrAllDataItem = [];
+
 getItemFromLocal();
 sumAllItemsInCart();
 
@@ -84,14 +87,46 @@ function addItemToCart(itemElement) {
   addItemToLocal();
 }
 
+// Add All items That in JSON File to Local;
+function addAllItemData(itemElement) {
+  // Extract the title, price, and image URL for each item
+  const title = itemElement.querySelector(".title-item").textContent.trim();
+  const price = itemElement.querySelector(".actual-price").textContent.trim();
+  const imageElement = itemElement.querySelector("img");
+  const imageUrl = imageElement ? imageElement.getAttribute("src") : "";
+
+  const itemData = {
+    title: title,
+    price: price,
+    image_url: imageUrl,
+    quantity: 1,
+    visit: false,
+  };
+  arrAllDataItem.push(itemData);
+  addAllItemsToLocal();
+}
+
+// Add the Selected items by users to Local
 export function addItemToLocal() {
   localStorage.setItem("CartItems", JSON.stringify(cartItemsArr));
+}
+
+// Add the All items that exist to Local
+export function addAllItemsToLocal() {
+  localStorage.setItem("allItemsData", JSON.stringify(arrAllDataItem));
 }
 
 export function getItemFromLocal() {
   // Check if Theres Tasks In Local Storage
   if (localStorage.getItem("CartItems")) {
     cartItemsArr = JSON.parse(localStorage.getItem("CartItems"));
+  }
+}
+
+export function getAllItemsToLocal() {
+  // Check if Theres Tasks In Local Storage
+  if (localStorage.getItem("allItemsData")) {
+    arrAllDataItem = JSON.parse(localStorage.getItem("allItemsData"));
   }
 }
 

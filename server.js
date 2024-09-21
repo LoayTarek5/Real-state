@@ -20,6 +20,7 @@ initializePassport(
 const users = [];
 
 app.use(express.static("public"));
+app.use(express.json());
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
@@ -34,8 +35,43 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride("_method"));
 
+const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+
+app.post("/create-checkout-session", async (req, res) => {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+      line_items: req.body.cartItemsArr.map((item) => {
+        let priceNum = +(item.price
+        .split("")
+        .filter((ch) => ch !== "$" && ch !== "." && ch !== ",")
+        .join(""));
+        return {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: item.title,
+            },
+            unit_amount: (+priceNum)-10000000,
+          },
+          quantity: item.quantity,
+        };
+      }),
+      success_url: `${process.env.SERVER_URL}/index.html`,
+      cancel_url: `${process.env.SERVER_URL}/search.html`,
+    });
+    res.json({ url: session.url  });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 app.get("/succsses", checkAuthenticated, (req, res) => {
-  res.render("succsses.ejs", { name: req.user.name });
+  res.render("succsses.ejs", {
+    name: req.user.name,
+    lastName: req.user.last_name,
+  });
 });
 
 app.get("/login", checkNotAuthenticated, (req, res) => {
@@ -63,6 +99,7 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
       id: Date.now().toString(),
       name: req.body.name,
       email: req.body.email,
+      lastName: req.body.last_name,
       password: hashedPassword,
     });
     res.redirect("/login");
@@ -96,5 +133,4 @@ function checkNotAuthenticated(req, res, next) {
   }
   next();
 }
-
 app.listen(3000);

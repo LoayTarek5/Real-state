@@ -134,11 +134,26 @@
     </div>
     <div class="account">
       <div class="container">
-        <h2 class="main-header">account</h2>
-        <h1>WELCOME, <%= name %></h1>
-        <form action="/logout?_method=DELETE" method="POST">
-          <button type="submit">Log Out</button>
-        </form>
+        <h2 class="main-header">WELCOME, <%= name %> <%= lastName %></h2>
+        <div class="main-options">
+          <div class="content-options">
+            <div class="box information">
+              <i class="fa-solid fa-user"></i>
+              <p>Information</p>
+            </div>
+            <div class="box address">
+              <i class="fa-regular fa-address-book"></i>
+              <p>Customer Addres</p>
+            </div>
+            <div class="box log-out">
+              <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
+              <form action="/logout?_method=DELETE" method="POST">
+                <button type="submit">Log Out</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
     <footer>
