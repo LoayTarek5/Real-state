@@ -115,15 +115,5 @@ Main dependencies include:
 
 For a full list of dependencies, refer to the `package.json` file.
 
-## Contributing
 
-Contributions to improve the project are welcome. Please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Make your changes and commit them with descriptive commit messages.
-4. Push your changes to your fork.
-5. Submit a pull request with a description of your changes.
 
-## License
-
-[Add your chosen license here]
